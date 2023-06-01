@@ -1,0 +1,61 @@
+{
+    "name": "base-bailey-memory",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "pre-copy": "cd .. && npm run  copy.lib base-baileys-memory",
+        "start": "node dist/start.js",
+        "build": "babel src -d dist",
+        "dev": "npm run build && nodemon dist/start.js",
+        "prebuild": "rimraf dist",
+        "prettier": "prettier '*/**/*.(js|ts)' --check",
+        "prettier:write": "prettier '*/**/*.(js|ts)' --write",
+        "lint": "eslint '*/**/*.{js,ts}' --quiet",
+        "lint:fix": "eslint '*/**/*.{js,ts}' --quiet --fix",
+        "coverage": "echo 'Test pending'",
+        "test": "echo 'pending'",
+        "prepare": "husky install",
+        "pre-commit": "npm run prettier:write && npm run lint:fix"
+    },
+    "keywords": [],
+    "dependencies": {
+        "@adiwajshing/baileys": "github:WhiskeySockets/Baileys",
+        "@adiwajshing/keyed-db": "^0.2.4",
+        "@bot-whatsapp/bot": "0.0.132-alpha.0",
+        "@bot-whatsapp/cli": "latest",
+        "@bot-whatsapp/database": "latest",
+        "@bot-whatsapp/portal": "latest",
+        "@bot-whatsapp/provider": "^0.1.28",
+        "@ffmpeg-installer/ffmpeg": "^1.1.0",
+        "bot-ws-plugin-openai": "^1.0.2",
+        "dotenv": "^16.0.3",
+        "fluent-ffmpeg": "^2.1.2",
+        "mime-types": "2.1.35",
+        "openai": "^3.2.1",
+        "uuid": "^9.0.0",
+        "wa-sticker-formatter": "4.3.2"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.21.5",
+        "@babel/core": "^7.22.1",
+        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        "@babel/plugin-transform-object-rest-spread": "^7.22.3",
+        "@babel/preset-env": "^7.22.4",
+        "@typescript-eslint/eslint-plugin": "^5.42.1",
+        "@typescript-eslint/parser": "^5.42.1",
+        "eslint": "^8.27.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^8.0.2",
+        "nodemon": "^2.0.22",
+        "prettier": "^2.8.7"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run pre-commit"
+        }
+    }
+}

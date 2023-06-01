@@ -1,0 +1,12 @@
+README.md
+.env.example
+.gitignore
+.prettierrc.json
+node_modules
+npm-devug.log*
+Dockerfile
+.gitlab*
+postman
+.vscode
+docs
+.nyc

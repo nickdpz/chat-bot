@@ -1,0 +1,22 @@
+{
+    "singleQuote": true,
+    "printWidth": 80,
+    "useTabs": false,
+    "tabWidth": 4,
+    "semi": true,
+    "bracketSpacing": true,
+    "endOfLine": "auto",
+    "trailingComma": "none",
+    "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "@common/(.*)$",
+        "@middlewares/(.*)$",
+        "@utils/(.*)$",
+        "@contexts/(.*)$",
+        "^[../]",
+        "^[./]",
+        "@database/(.*)$"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+}

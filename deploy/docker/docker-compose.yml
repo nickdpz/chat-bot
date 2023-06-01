@@ -1,0 +1,11 @@
+version: '3'
+services:
+  titin-backend-chat-bot-server:
+    image: titin-backend-chat-bot
+    container_name: titin-backend-chat-bot-container
+    restart: on-failure
+    env_file:
+        - ../.env
+    volumes:
+      - "$PWD:/usr/src/app"
+      - "/usr/src/app/node_modules"
